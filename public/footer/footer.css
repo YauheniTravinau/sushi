@@ -1,0 +1,23 @@
+
+footer {
+    background-color: #3b3b3b;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+}
+.logo-section img {
+    max-width: 100px;
+    margin: 10px;
+    vertical-align: middle;
+}
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    color: white;
+}

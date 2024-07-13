@@ -1,0 +1,12 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore npm package files
+package.json
+package-lock.json
+
+# Ignore server.js file
+server.js

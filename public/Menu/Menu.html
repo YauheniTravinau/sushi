@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animowane Menu z Logo</title>
+    <link rel="stylesheet" href="Menu.css">
+</head>
+<body>
+
+<nav class="menu-nav">
+    <div class="menu-btn" onclick="toggleMenu()">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+    </div>
+    <ul class="menu-items">
+        <li class="menu-item"><a href="/public/glowna/glowna.html">Menu</a></li>
+
+        <li class="menu-item">
+            <a href="#">LUNCH MENU</a>
+            <div class="logo-container">
+                <img class="logo" src="/public/images/64x64rr2.png" alt="Logo 1">
+            </div>
+        </li>
+        <li class="menu-item">
+            <a href="#">Bufety</a>
+            <div class="logo-container">
+                <img class="logo" src="/public/images/64x64rr2.png" alt="Logo 2">
+            </div>
+        </li>
+        <li class="menu-item">
+            <a href="#">Świętuj z nami</a>
+            <div class="logo-container">
+                <img class="logo" src="/public/images/64x64rr2.png" alt="Logo 3">
+            </div>
+        </li>
+        <li class="menu-item">
+            <a href="#">Zniżki do 50%</a>
+            <div class="logo-container">
+                <img class="logo" src="/public/images/64x64rr2.png" alt="Logo 4">
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<script src="Menu.js"></script>
+</body>
+</html>
