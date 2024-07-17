@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta produktu Sushi</title>
+    <link rel="stylesheet" href="lunch-menu.css">
+    <link rel="stylesheet" href="/public/Menu/Menu.css">
+    <link rel="stylesheet" href="/global.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+<div id="menu-placeholder"></div>
+<div class="h1-container">
+    <img src="/public/images/64x64rr2.png" alt="Sushi Image" class="background-image">
+    <h1 class="center-h1">LUNCH MENU</h1>
+    <p class="lunch-time"><strong>Godziny lunchu od Pon-Pt.: <span>12:00 - 14:00</span></strong></p>
+    <div class="container">
+        <div class="message-text">Nie możesz przyjść? Zrób zamówienie!</div>
+        <a class="whatsapp-button" href="https://wa.me/твой_номер">WhatsApp</a>
+        <a class="phone-button" href="tel:+твой_телефон">Telefon</a>
+    </div>
+</div>
+<div class="product-card">
+    <div class="product-info">
+        <h1>Zestaw sushi obiadowy</h1>
+        <p class="description">Ciesz się naszym zestawem sushi na obiad.</p>
+        <p><strong>Zestaw zawiera - 16 szt: </strong></p>
+        <ul>
+            <li>Sushi z łososiem - 2 szt.
+                <p class="description">Świeży łosoś, ryż, algi</p>
+            </li>
+            <li>Sushi z tuńczykiem - 2 szt.
+                <p class="description">Świeży tuńczyk, ryż, algi</p>
+            </li>
+            <li>Sushi z wężem morską - 2 szt.
+                <p class="description">Węgorz, ryż, algi, sos unagi</p>
+            </li>
+            <li>Sushi z krewetką - 2 szt.
+                <p class="description">Krewetka, ryż, algi</p>
+            </li>
+        </ul>
+        <p class="price">77 zł</p>
+    </div>
+    <div class="product-images">
+        <div class="main-image">
+            <img id="main-img1" src="/public/test/images/s1.jpg" alt="Sushi" width="400" height="300">
+        </div>
+        <div class="thumbnails">
+            <img class="thumb" src="/public/test/images/s2.jpg" alt="Sushi 1" onclick="changeImage('main-img1', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s10.jpg" alt="Sushi 2" onclick="changeImage('main-img1', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s11.jpg" alt="Sushi 3" onclick="changeImage('main-img1', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s12.jpg" alt="Sushi 3" onclick="changeImage('main-img1', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s16.jpg" alt="Sushi 3" onclick="changeImage('main-img1', this)" width="60" height="60">
+        </div>
+    </div>
+</div>
+<div class="product-card">
+    <div class="product-images product-images-right">
+        <div class="main-image">
+            <img id="main-img2" src="/public/test/images/s1.jpg" alt="Sushi" width="400" height="300">
+        </div>
+        <div class="thumbnails">
+            <img class="thumb" src="/public/test/images/s2.jpg" alt="Sushi 1" onclick="changeImage('main-img2', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s10.jpg" alt="Sushi 2" onclick="changeImage('main-img2', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s11.jpg" alt="Sushi 3" onclick="changeImage('main-img2', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s12.jpg" alt="Sushi 3" onclick="changeImage('main-img2', this)" width="60" height="60">
+            <img class="thumb" src="/public/test/images/s16.jpg" alt="Sushi 3" onclick="changeImage('main-img2', this)" width="60" height="60">
+        </div>
+    </div>
+    <div class="product-info product-info-right">
+        <h1>Zestaw sushi obiadowy</h1>
+        <p class="description">Ciesz się naszym zestawem sushi na obiad.</p>
+        <p><strong>Zestaw zawiera - 16 szt: </strong></p>
+        <ul class= product-right>
+            <li>Sushi z łososiem - 2 szt.
+                <p class="description">Świeży łosoś, ryż, algi</p>
+            </li>
+            <li>Sushi z tuńczykiem - 2 szt.
+                <p class="description">Świeży tuńczyk, ryż, algi</p>
+            </li>
+            <li>Sushi z wężem morską - 2 szt.
+                <p class="description">Węgorz, ryż, algi, sos unagi</p>
+            </li>
+            <li>Sushi z krewetką - 2 szt.
+                <p class="description">Krewetka, ryż, algi</p>
+            </li>
+        </ul>
+        <p class="price">77 zł</p>
+    </div>
+</div>
+<div id="footer-placeholder"></div>
+<script src="lunch-menu.js"></script>
+<script src="/global.js"></script>
+</body>
+</html>

@@ -79,21 +79,11 @@
     background-color: #e64d00;
 }
 
-.h1-container {
-    text-align: center; /* Центрируем содержимое по горизонтали */
-    padding: 20px; /* Добавляем внутренние отступы для контейнера */
-    background-position: center; /* Центрируем изображение по горизонтали и вертикали */
-
-}
-
-.center-h1 {
-    margin: 0; /* Убираем внешние отступы у заголовка */
-}
-
 /* Медиа-запросы для адаптации стилей под разные экраны */
 @media only screen and (max-width: 1200px) {
     .menu-card {
         width: calc(50% - 20px);
+        margin: 10px;
     }
 }
 

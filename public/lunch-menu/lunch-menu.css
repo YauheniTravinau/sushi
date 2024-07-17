@@ -1,0 +1,128 @@
+.product-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Уменьшаем максимальную ширину карточки */
+    margin: 20px auto; /* Увеличенный отступ для центрирования и разделения карточек */
+}
+
+.product-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.product-info.product-info-right {
+    text-align: right; /* Для второй карточки текст выравниваем по правому краю */
+}
+
+.product-right {
+    list-style-position: inside; /* Располагаем маркеры внутри элементов списка */
+}
+
+.product-images {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ddd;
+}
+
+.product-images.product-images-right {
+    border-left: none; /* Убираем линию слева */
+    border-right: 1px solid #ddd; /* Добавляем линию справа для второй карточки */
+}
+
+.main-image {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnails img:hover {
+    border: 2px solid rgba(255, 131, 131, 0.8);
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgba(255, 131, 131, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    padding: 10px; /* Добавляем внутренние отступы вокруг текста */
+}
+
+.product-info ul {
+    padding-left: 30px; /* Добавляем отступ слева для списка */
+}
+
+.product-info .description {
+    padding-left: 30px; /* Добавляем отступ слева для описания внутри списка */
+}
+
+/**/
+.message-text {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #666;
+}
+.whatsapp-button, .phone-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 6px;
+    color: rgba(255, 131, 131, 0.8); /* Цвет WhatsApp */
+    background-color: #FFFFFF;
+    border: 1px solid rgba(255, 131, 131, 0.8);
+    transition: background-color 0.3s, color 0.3s;
+}
+.whatsapp-button:hover, .phone-button:hover {
+    background-color: rgba(255, 131, 131, 0.8);
+    color: #FFFFFF;
+}
+.phone-button {
+    color: rgba(255, 131, 131, 0.8); /* Цвет телефона */
+    border-color: rgba(255, 131, 131, 0.8);
+}
+.phone-button:hover {
+    background-color: rgba(255, 131, 131, 0.8);
+    color: #FFFFFF;
+}
+
+/**/
+
+.lunch-time {
+    font-size: 16px;
+}
+.lunch-time span {
+    color: rgba(255, 131, 131, 0.8); /* Inny kolor dla czasu lunchu */
+}
