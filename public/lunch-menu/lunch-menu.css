@@ -126,3 +126,27 @@
 .lunch-time span {
     color: rgba(255, 131, 131, 0.8); /* Inny kolor dla czasu lunchu */
 }
+
+@media screen and (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .product-images {
+        border-left: none;
+        border-bottom: 1px solid #ddd; /* Добавляем линию снизу на мобильных устройствах */
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .main-image {
+        order: 1; /* Перемещаем изображение вверх на мобильных устройствах */
+    }
+
+    .product-info {
+        order: 2; /* Перемещаем информацию вниз на мобильных устройствах */
+    }
+}
