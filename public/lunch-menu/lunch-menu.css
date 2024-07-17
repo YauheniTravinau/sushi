@@ -20,6 +20,11 @@
     border-left: 1px solid #ddd;
 }
 
+.product-images.product-images-right {
+    border-left: none; /* Убираем линию слева */
+    border-right: 1px solid #ddd; /* Добавляем линию справа для второй карточки */
+}
+
 .main-image {
     padding: 20px;
     text-align: center;
@@ -116,6 +121,10 @@
     .product-images {
         border-left: none;
         border-bottom: 1px solid #ddd; /* Добавляем линию снизу на мобильных устройствах */
+    }
+
+    .product-images.product-images-right {
+        border-right: none; /* Убираем линию слева */
     }
 
     .product-info {
