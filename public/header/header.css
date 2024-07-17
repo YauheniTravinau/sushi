@@ -36,6 +36,11 @@
     font-weight: bold; /* делаем текст жирным */
 }
 
+.discount {
+    display: block;
+    margin-left: 20px;
+}
+
 /* Media Query for Phones */
 @media only screen and (max-width: 600px) {
     /* Adjust header layout for phones */
