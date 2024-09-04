@@ -29,15 +29,15 @@
     right: -2px; /* Сдвигаем вправо на половину толщины обводки */
     width: calc(50% + 2px); /* Увеличиваем ширину на половину толщины обводки */
     height: calc(50% + 2px); /* Увеличиваем высоту на половину толщины обводки */
-    border-top: 8px solid rgba(255, 131, 131, 0.8); /* Цвет и толщина обводки */
-    border-right: 8px solid rgba(255, 131, 131, 0.8); /* Цвет и толщина обводки */
+    border-top: 8px solid rgb(234, 93, 93); /* Цвет и толщина обводки */
+    border-right: 8px solid rgb(234, 93, 93); /* Цвет и толщина обводки */
     border-top-right-radius: 8px; /* Радиус скругления угла */
     z-index: 1;
 }
 
 .menu-item2:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(59, 78, 89);
 }
 
 .menu-item2 img {
@@ -52,12 +52,25 @@
     margin: 0;
     padding: 10px;
     text-align: center;
-    background-color: #3b3b3b;
+    background-color: #3b4e59;
     color: #fff;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1em;
     width: 100%;
     box-sizing: border-box;
     border: none;
     display: block;
+    height: 100%; /* или фиксированная высота */
+}
+
+.sushi-title {
+    display: inline-block;
+    border: 1px solid #ea5d5d;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.sushi-title-container {
+    text-align: center; /* Центрирует рамку */
 }

@@ -1,4 +1,12 @@
 /* Сброс стандартных стилей и нормализация */
+
+@font-face {
+    font-family: 'Gagalin';
+    src: url('/public/fonts/Gagalin-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,28 +15,24 @@
 
 /* Основные стили для body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gagalin', sans-serif;
     line-height: 1.6;
 }
 
+
 h1, h2, h3, h4 {
     text-align: center;
+    margin: 20px;
 }
 
+
 .h1-container {
-    text-align: center; /* Центрируем содержимое по горизонтали */
-    padding: 20px; /* Добавляем внутренние отступы для контейнера */
-    background-position: center; /* Центрируем изображение по горизонтали и вертикали */
+    text-align: center;
+    padding: 20px;
+    background-position: center;
 
 }
 
 .center-h1 {
-    margin: 0; /* Убираем внешние отступы у заголовка */
-}
-
-.lunch-time {
-    font-size: 16px;
-}
-.lunch-time span {
-    color: rgba(255, 131, 131, 0.8); /* Inny kolor dla czasu lunchu */
+    margin: 0;
 }

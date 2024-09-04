@@ -1,7 +1,49 @@
+/* Общий стиль для блока рабочего времени */
+.working-hours {
+    color: white; /* Общий цвет текста для всего блока */
+    text-align: center; /* Центрирование текста, если нужно */
+}
+
+/* Размер шрифта для элементов с классом lunch-time (21px) */
+.lunch-time {
+    font-size: 21px; /* Размер шрифта 21px для .lunch-time */
+    color: rgb(255, 255, 255); /* Цвет текста */
+}
+
+/* Размер шрифта для span внутри элементов lunch-time (21px) */
+.lunch-time span {
+    font-size: 21px; /* Размер шрифта 21px для span внутри .lunch-time */
+    color: rgb(234, 93, 93); /* Цвет текста в span */
+}
+
+/* Размер шрифта для последних двух параграфов с классом lunch-time (16px) */
+.working-hours p.lunch-time:nth-last-of-type(1),
+.working-hours p.lunch-time:nth-last-of-type(2) {
+    font-size: 14px; /* Размер шрифта 16px для последних двух параграфов */
+}
+
+/* Стили для элемента zapraszamy */
+.zapraszamy {
+    color: white; /* Цвет текста белый */
+    text-align: center; /* Центрирование текста */
+    font-size: 21px; /* Размер шрифта 21px */
+}
+
+.zapraszamy::after {
+    content: "!"; /* Добавляем восклицательный знак после текста */
+    color: #ea5d5d; /* Цвет восклицательного знака розовый */
+}
+
+/* Общие стили для хедера */
+.header-container {
+    background-color: #3b4e59; /* Цвет заднего фона */
+    padding: 20px 0; /* Отступы сверху и снизу */
+}
+
 .header {
     max-width: 930px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px; /* Отступы слева и справа */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,26 +56,49 @@
 }
 
 .social-icons {
-    margin-top: 10px; /* добавляем отступ сверху между контактной информацией и иконками */
+    margin-top: 10px; /* Отступ сверху между контактной информацией и иконками */
     display: flex;
-    gap: 10px; /* расстояние между иконками */
+    gap: 10px; /* Расстояние между иконками */
 }
 
 .contact-info h2 {
     margin: 0;
 }
 
-.contact-info img {
-    width: 30px;
+/* Сделать текст белым для всех элементов в .contact-info */
+.contact-info span,
+.contact-info div a {
+    color: white;
 }
 
+.contact-info h2 a.contact-link {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+/* Подчеркивание при наведении на ссылку */
+.contact-link:hover {
+    text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+/* Подчеркивание при наведении на ссылку */
+.address-link:hover {
+    text-decoration: underline;
+}
+
+.bottom-image img {
+    max-width: none;
+    transform: translateX(-50%) rotate(40deg);
+}
+
+
 .header a {
-    color: black; /* устанавливаем цвет текста ссылок на черный */
-    text-decoration: none; /* убираем подчеркивание ссылок */
+    color: black; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
 }
 
 .address-text {
-    font-weight: bold; /* делаем текст жирным */
+    font-weight: normal; /* Убираем жирное начертание текста */
 }
 
 .discount {
@@ -41,22 +106,22 @@
     margin-left: 20px;
 }
 
-/* Media Query for Phones */
-@media only screen and (max-width: 600px) {
-    /* Adjust header layout for phones */
+/* Media Query для телефонов */
+@media only screen and (max-width: 780px) {
+    /* Настройка макета для телефонов */
     .header {
         flex-direction: column;
         align-items: center;
     }
 
     .working-hours {
-        text-align: center;
+        text-align: left;
         margin-bottom: 20px;
     }
 
-    .logo-container-company {
-        text-align: center;
-        margin-bottom: 20px;
+    .logo-container-company img {
+        width: 150px; /* Уменьшение размера логотипа */
+        height: auto;
     }
 
     .contact-info {
@@ -66,11 +131,44 @@
     .social-icons {
         justify-content: center;
     }
+
+    .lunch-time {
+        font-size: 18px; /* Уменьшение размера шрифта */
+    }
+
+    .lunch-time span {
+        font-size: 18px; /* Уменьшение размера шрифта */
+    }
+
+    .zapraszamy {
+        font-size: 18px; /* Уменьшение размера шрифта */
+    }
+
+    .contact-info h2 a.contact-link {
+        font-size: 20px; /* Уменьшение размера шрифта */
+    }
+
+    .contact-info span,
+    .contact-info div a {
+        font-size: 16px; /* Уменьшение размера шрифта */
+    }
+
+    /* Уменьшение размера иконок адреса */
+    .address-icon {
+        width: 20px; /* Уменьшение размера иконки адреса */
+        height: 20px;
+    }
+
+    /* Уменьшение размера иконки телефона */
+    .phone-icon {
+        width: 20px; /* Уменьшение размера иконки телефона */
+        height: 20px;
+    }
 }
 
-/* Media Query for Tablets */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Adjust header layout for tablets */
+/* Media Query для планшетов */
+@media only screen and (min-width: 781px) and (max-width: 1024px) {
+    /* Настройка макета для планшетов */
     .header {
         flex-direction: row;
         justify-content: space-between;
@@ -81,7 +179,7 @@
         margin-right: 20px;
     }
 
-    .logo-container-company {
-        margin-left: 20px;
+    .logo-container-company img {
+        height: auto;
     }
 }

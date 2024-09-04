@@ -1,3 +1,24 @@
+/* Подключение шрифта OpenSauceTwo */
+@font-face {
+    font-family: 'OpenSauceTwo';
+    src: url('/public/fonts/OpenSauceTwo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Применение шрифта OpenSauceTwo к тексту внутри .product-card */
+.product-card {
+    font-family: 'OpenSauceTwo', sans-serif; /* Применяем шрифт к тексту внутри .product-card */
+}
+
+/* Заголовки внутри .product-card остаются с шрифтом Gagalin */
+.product-card h1,
+.product-card h2,
+.product-card h3,
+.product-card h4 {
+    font-family: 'Gagalin', sans-serif; /* Используем шрифт Gagalin для заголовков */
+}
+
 .product-card {
     display: flex;
     border-radius: 8px;
@@ -51,17 +72,16 @@
 }
 
 .thumbnails img:hover {
-    border: 2px solid rgba(255, 131, 131, 0.8);
+    border: 2px solid rgb(234, 93, 93);
 }
 
 .price {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color: rgba(255, 131, 131, 0.8);
-    padding: 10px;
     text-align: center; /* Центрируем текст */
+    border: 2px solid #000; /* Толщина, стиль и цвет рамки */
+    border-radius: 10px; /* Закругленные углы */
+    padding: 10px; /* Внутренний отступ, чтобы текст не прилегал к краям рамки */
 }
+
 
 .description {
     font-size: 0.9rem;
@@ -83,7 +103,7 @@
     color: #666;
 }
 
-.whatsapp-button, .phone-button {
+.phone-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 14px;
@@ -91,25 +111,44 @@
     text-decoration: none;
     margin: 0 5px;
     border-radius: 6px;
-    color: rgba(255, 131, 131, 0.8); /* Цвет WhatsApp */
+    color: rgb(234, 93, 93); /* Цвет WhatsApp */
     background-color: #FFFFFF;
-    border: 1px solid rgba(255, 131, 131, 0.8);
+    border: 1px solid rgb(234, 93, 93);
     transition: background-color 0.3s, color 0.3s;
 }
 
-.whatsapp-button:hover, .phone-button:hover {
-    background-color: rgba(255, 131, 131, 0.8);
+.phone-button:hover {
+    background-color: rgb(234, 93, 93);
     color: #FFFFFF;
 }
 
 .phone-button {
-    color: rgba(255, 131, 131, 0.8); /* Цвет телефона */
-    border-color: rgba(255, 131, 131, 0.8);
+    color: rgb(234, 93, 93); /* Цвет телефона */
+    border-color: rgb(234, 93, 93);
 }
 
 .phone-button:hover {
-    background-color: rgba(255, 131, 131, 0.8);
+    background-color: rgb(234, 93, 93);
     color: #FFFFFF;
+}
+
+.lunch-time1 {
+    color: #ea5d5d; /* Розовый цвет для всего текста */
+    font-size: 21px;
+}
+
+.time {
+    color: white; /* Белый цвет для времени */
+    text-shadow:
+            2px 2px 0 black,
+            -2px -2px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black; /* Черные края для цифр */
+    font-size: 21px; /* Размер шрифта 21 пиксель */
+}
+
+.highlight {
+    color: #ea5d5d;
 }
 
 @media screen and (max-width: 768px) {
@@ -137,5 +176,16 @@
 
     .product-info {
         order: 2; /* Перемещаем информацию вниз на мобильных устройствах */
+    }
+
+    /* Новые стили для мелких экранов */
+    .lunch-time1 {
+        font-size: 18px; /* Уменьшаем размер шрифта для мелких экранов */
+        text-align: center; /* Центрируем текст */
+        margin: 0 10px; /* Добавляем отступы по краям */
+    }
+
+    .time {
+        font-size: 18px; /* Уменьшаем размер шрифта для мелких экранов */
     }
 }
