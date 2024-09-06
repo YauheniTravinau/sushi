@@ -1,0 +1,30 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(12deg);
+    transform-origin: center;
+}
+
+.inner-container {
+    text-align: center;
+    border: 2px solid #ea5d5d; /* Розовая рамка шириной 2 пикселя */
+    padding: 10px; /* Отступы внутри рамки, если нужно */
+    background-color: #fff; /* Добавляем фон для лучшего видимости */
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text {
+    color: #3b4e59;
+    margin: 10px 0 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}

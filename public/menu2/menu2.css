@@ -64,3 +64,27 @@
 .menu-container2 a {
     position: relative;
 }
+
+/*указатель*/
+.pulse-icon {
+    position: absolute;
+    bottom: -15px; /* Перемещение вниз */
+    right: -5px;  /* Перемещение вправо */
+    font-size: 24px; /* Размер иконки */
+    animation: pulse 1.5s infinite; /* Пульсирующая анимация */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-90deg); /* Поворот на -45 градусов */
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2) rotate(-90deg); /* Поворот на -45 градусов */
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1) rotate(-90deg); /* Поворот на -45 градусов */
+        opacity: 1;
+    }
+}
