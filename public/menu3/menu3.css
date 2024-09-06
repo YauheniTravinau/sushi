@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-container {
+    display: flex;
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    border-right: 2px solid #ddd;
+    padding: 10px;
+}
+
+.menu-sidebar .menu-category {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    border-left: 5px solid transparent;
+}
+
+.menu-sidebar .menu-category:hover {
+    background-color: #e0e0e0;
+}
+
+.menu-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.category-content {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .menu-content {
+        padding: 10px;
+    }
+}
+
+.menu-sidebar .menu-category.active {
+    border-left: 5px solid #333; /* Цвет линии для активной рубрики */
+    background-color: #e0e0e0; /* Цвет фона для активной рубрики */
+}
+
+/**/

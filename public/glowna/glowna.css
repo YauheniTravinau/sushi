@@ -12,7 +12,7 @@
 .menu-card {
     width: calc(33.33% - 20px); /* Adjust width to fit 3 cards per row */
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(59, 78, 89);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -35,21 +35,22 @@
 }
 .description {
     font-size: 0.9rem;
-    color: #666;
+    color: #6c757d;
 }
 .price {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: normal;
     margin: 10px 0;
 }
+
 .quantity {
     margin-top: 15px;
     display: flex;
     align-items: center;
 }
 .quantity-btn {
-    background-color: #ff6600;
-    color: #fff;
+    background-color: #e8e8e8;
+    color: #3b4e59;
     border: none;
     padding: 8px 12px;
     font-size: 1rem;
@@ -58,14 +59,14 @@
     transition: background-color 0.3s ease;
 }
 .quantity-btn:hover {
-    background-color: #e64d00;
+    background-color: #ea5d5d;
 }
 .quantity-number {
     margin: 0 10px;
     font-size: 1.2rem;
 }
 .order-btn {
-    background-color: #ff6600;
+    background-color: #ea5d5d;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -76,8 +77,29 @@
     margin-top: 10px;
 }
 .order-btn:hover {
-    background-color: #e64d00;
+    background-color: #ea5d5d;
 }
+
+.quantity-number {
+    color: #3B4E59FF;
+}
+
+.price {
+    color: #3B4E59FF;
+}
+
+.item-name {
+    color: #3B4E59FF;
+}
+
+.highlight {
+    color: #ea5d5d;
+}
+
+.center-h1 {
+    color: #3b4e59; /* Здесь можно указать любой цвет или код */
+}
+
 
 /* Медиа-запросы для адаптации стилей под разные экраны */
 @media only screen and (max-width: 1200px) {

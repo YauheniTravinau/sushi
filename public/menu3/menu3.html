@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/public/menu3/menu3.css">
+</head>
+<body>
+<header>
+    <h1>Menu</h1>
+</header>
+<main>
+    <div class="menu-container">
+        <div class="menu-sidebar">
+            <div class="menu-category" onclick="toggleContent('futomaki')">Futomaki</div>
+            <div class="menu-category" onclick="toggleContent('futomaki-tempura')">Futomaki w Tempurze</div>
+            <div class="menu-category" onclick="toggleContent('uramaki')">Uramaki</div>
+            <div class="menu-category" onclick="toggleContent('hosomaki')">Hosomaki</div>
+            <div class="menu-category" onclick="toggleContent('nigiri')">Nigiri</div>
+            <div class="menu-category" onclick="toggleContent('zupy')">Zupy</div>
+            <div class="menu-category" onclick="toggleContent('desery')">Desery</div>
+            <div class="menu-category" onclick="toggleContent('przystawki')">Przystawki</div>
+            <div class="menu-category" onclick="toggleContent('napoje')">Napoje</div>
+            <div class="menu-category" onclick="toggleContent('dodatki')">Dodatki</div>
+            <div class="menu-category" onclick="toggleContent('bowle')">Bowle</div>
+            <div class="menu-category" onclick="toggleContent('zestawy')">Zestawy</div>
+            <div class="menu-category" onclick="toggleContent('lunch')">Lunch</div>
+            <div class="menu-category" onclick="toggleContent('cennik-dostaw')">Cennik Dostaw</div>
+            <div class="menu-category" onclick="toggleContent('happy-hours')">Happy Hours</div>
+        </div>
+        <div class="menu-content">
+            <div id="futomaki" class="category-content">
+                <h2>Futomaki (6 szt.)</h2>
+                <p>Łosoś - sałata, surimi, majonez - 26 zł</p>
+                <p>Philadelphia - łosoś, awokado, serek - 29 zł</p>
+                <p>Pieczony łosoś - sałata, tykwa, majonez, sos kabayaki, sezam - 28 zł</p>
+                <p>Wędzony łosoś- ogórek, serek, oshinko - 29 zł</p>
+                <p>Tatar z łososia - łosoś, por, sambal, shichimi, sos sojowy - 31 zł</p>
+                <p>Tatar z łososia z krewetką w tempurze - 33 zł</p>
+                <p>Krewetka w tempurze z awokado- goma wakame, tykwa, sweet chilli - 29 zł</p>
+                <p>Krewetki w tempurze – ogórek, oshinko, por, sos kobe - 29 zł</p>
+                <p>Krewetki gotowane – awokado, serek, ogórek, sos mango - 28 zł</p>
+                <p>Tuńczyk z jalapeno - oshinko, ogórek, jalapeno, sriracha - 30 zł</p>
+                <p>Ika – kalmary, sałata, oshinko, jalapeno, sos kobe - 26 zł</p>
+                <p>Krab –surimi, shichimi, por, majonez, sweet chilli - 23 zł</p>
+                <p>Dorsz - sałata, tykwa, serek, sos kabayaki, sezam - 26 zł</p>
+                <p>Węgorz - ogórek, tykwa, awokado, majonez, sos teriyaki, sezam - 31 zł</p>
+                <p>Tofu/wege - ogórek, tofu, tykwa,oshinko, serek - 24 zł</p>
+            </div>
+            <div id="futomaki-tempura" class="category-content">
+                <h2>Futomaki w Tempurze (6 szt.)</h2>
+                <p>Tatar z łososia w Panko - 35 zł</p>
+                <p>Hot tuna w Panko - oshinko, jalapeno,ogórek, por, sriracha- 34 zł</p>
+                <p>Łosoś w Panko - surimi, ogórek, majonez, sos kabayaki - 30 zł</p>
+                <p>Łosoś w Migdałach – serek, ogórek, oshinko, tykwa, sos kabayaki - 35 zł</p>
+                <p>Węgorz w Panko – majonez, ogórek, oshinko, tykwa, sos teriyaki - 36 zł</p>
+                <p>Surimi w Tempurze - shichimi, por, sriracha, majonez, sweet chilli - 28 zł</p>
+                <p>Wege w Tempurze - ogórek, tykwa, oshinko, por, serek, sos kabayaki - 28 zł</p>
+            </div>
+            <div id="uramaki" class="category-content">
+                <h2>Uramaki (5 szt.)</h2>
+                <p>Łosoś – ogórek, awokado, serek, sezam - 24 zł</p>
+                <p>Pikantny łosoś - awokado, kobe, jalapeno, mango, sezam - 26 zł</p>
+                <p>Łosoś Surimi - serek, awokado, sałata, tosago - 27 zł</p>
+                <p>Łosoś pieczony – tykwa, serek, sałata, sos kabayaki, sezam - 26 zł</p>
+                <p>California Tosago – surimi, sałata, awokado, serek, sezam - 21 zł</p>
+                <p>California Gold – łosoś, surimi, ogórek, awokado, serek - 26 zł</p>
+                <p>California Gold opalana – łosoś, surimi, ogórek, awokado - 27 zł</p>
+                <p>California Ebi – krewetki gotowane, surimi, ogórek, awokado, serek,sos mango  - 26zł</p>
+                <p>California Tuna – tuńczyk, surimi, ogórek, awokado, serek, jalapeno - 28 zł</p>
+                <p>Rainbow - krewetka gotowana,tuńczyk,łosoś,węgorz,surimi,ogórek, awokado, serek - 29 zł</p>
+                <p>Krewetka w tempurze z awokado – ogórek,oshinko, majonez, serek, migdały - 27 zł</p>
+                <p>Krewetka w tempurze z opalanym Łososiem - ogórek, oshinko, kobe, serek - 28 zł</p>
+                <p>Opalany tatar z łososia – krewetka w tempurze, ogórek, oshinko, sos kobe,migdały - 30 zł</p>
+                <p>Krewetką w tempurze z opalanym węgorzem - ogórek, oshinko, majonez, serek, sos teriyaki, sezam - 29 zł</p>
+                <p>Krewetka w tempurze – ogórek, oshinko, majonez, sezam - 24 zł</p>
+                <p>Tuńczyk - tuńczyk, serek, ogórek, oshinko, sezam - 27zl</p>
+                <p>Ika – kalmary, oshinko, sałata, por, kobe - 23 zł</p>
+                <p>Wege - sałata, tykwa, por, oshinko, serek, sezam - 23 zł</p>
+                <p>Goma/wege - serek, oshinko, awokado, ogórek, goma wakame - 25 zł</p>
+            </div>
+            <div id="hosomaki" class="category-content">
+                <h2>Hosomaki (6 szt.)</h2>
+                <p>Ogórek – 14 zł</p>
+                <p>Tykwa - 14 zł</p>
+                <p>Oshinko – 14 zł</p>
+                <p>Dorsz - 16 zł</p>
+                <p>Tuńczyk - 18 zł</p>
+                <p>Pieczony łosoś - 17 zł</p>
+                <p>Łosoś - 16 zł</p>
+                <p>Surimi - 14 zł</p>
+                <p>Ryżomak - 10 zł</p>
+            </div>
+            <div id="nigiri" class="category-content">
+                <h2>Nigiri</h2>
+                <p>Łosoś - 7 zł</p>
+                <p>Łosoś opalany – 8 zł</p>
+                <p>Węgorz - 9 zł</p>
+                <p>Krewetka - 7 zł</p>
+                <p>Tuńczyk - 9 zł</p>
+                <p>Zestaw nigiri - 49 zł</p>
+            </div>
+            <div id="zupy" class="category-content">
+                <h2>Zupy</h2>
+                <p>Miso Tofu – 13 zł</p>
+                <p>Miso łosoś – 16 zł</p>
+                <p>Tom Yum z krewetkami – 20 zł</p>
+                <p>Tom kha kai - 19 zł</p>
+            </div>
+            <div id="desery" class="category-content">
+                <h2>Desery</h2>
+                <p>Czeko-Banana - papier ryżowy, ryż, banan w tempurze, sos czekoladowy, sos mango, prażone migdały/ 10 szt. - 20 zł</p>
+                <p>Banan w tempurze z gałką lodów śmietankowych i płatkami migdałów - 18 zł</p>
+                <p>Lody Mochi /2 szt. - 14 zł</p>
+            </div>
+            <div id="przystawki" class="category-content">
+                <h2>Przystawki</h2>
+                <p>Wakame - 14 zł</p>
+                <p>Goma wakame - 16 zł</p>
+                <p>Kimchi - 16 zł</p>
+                <p>Edamame - 10 zł</p>
+                <p>Sałatka surimi z krewetkami - 22 zł</p>
+                <p>Krewetki w tempurze/ 5 szt. (dowolny sos) – 35 zł</p>
+                <p>Krewetki w migdałach/ 4 szt. (dowolny sos) – 31 zł</p>
+                <p>Krewetki w panko/ 5 szt. (dowolny sos) – 36 zł</p>
+                <p>Kalmary w panko/ 6 szt. (dowolny sos) - 27 zł</p>
+                <p>Pierożki gyoza z grzybami i sosem ponzu /5 szt. - 20 zł</p>
+                <p>Pierożki gyoza z krewetkami i sosem ponzu /5 szt. - 22 zł</p>
+                <p>Pierożki gyoza z warzywami i sosem ponzu /5 szt. - 17 zł</p>
+                <p>Tatar z łososia - 36 zł</p>
+                <p>Tatar z tuńczyka - 40 zł</p>
+            </div>
+            <div id="napoje" class="category-content">
+                <h2>Napoje</h2>
+                <p>COCA-COLA 0,25L - 7 ZŁ</p>
+                <p>COCA-COLA ZERO 0,25L - 7 ZŁ</p>
+                <p>FUZETEA BRZOSKWINIA-HIBISCUS 0,25L - 6 ZŁ</p>
+                <p>FUZETEA CYTRYNA Z TRAWĄ CYTRYNOWĄ 0,25L - 6 ZŁ</p>
+                <p>CAPPY GREJPFRUT 0,25L- 6 ZŁ</p>
+                <p>CAPPY POMARAŃCZA 0,25L - 6 ZŁ</p>
+                <p>CAPPY JABŁKO 0,25L- 6 ZŁ</p>
+                <p>KROPLA BESKIDU NGAZ 0,33L - 5 ZŁ</p>
+                <p>KROPLA DELICE GAZ 0,33L - 5 ZŁ</p>
+                <p>HERBATA (różne rodzaje) - 10 ZŁ</p>
+            </div>
+            <div id="dodatki" class="category-content">
+                <h2>Dodatki</h2>
+                <p>sos teriyaki - 3 zł</p>
+                <p>sos mango - 3 zł</p>
+                <p>sos kobe - 3 zł</p>
+                <p>sos ponzu - 3 zł</p>
+                <p>sos kabayaki - 3 zł</p>
+                <p>sos sojowy - 3 zł</p>
+                <p>wasabi - 3 zł</p>
+                <p>imbir - 3 zł</p>
+            </div>
+            <div id="bowle" class="category-content">
+                <h2>Bowle</h2>
+                <p>ŁOSOŚ SUROWY - majonez, ryż, ogórek, łosoś, goma wakame, avocado, rzodkiew</p>
+                <p>PIECZONY ŁOSOŚ - kabayaki, ryż, ogórek, łosoś pieczony, tykwa, edamame, marchew</p>
+                <p>KREWETKA W TEMPURZE - kobe, ryż, ogórek, krewetki w tempurze, tykwa, marchew, rzodkiew</p>
+                <p>WEGE - kabayaki, ryż, ogórek, tofu, goma wakame, edamame, marchew</p>
+            </div>
+            <div id="zestawy" class="category-content">
+                <h2>Zestawy</h2>
+                <p>SET 1   17 szt./ 49 zł</p>
+                <p>Futomak krewetka gotowana</p>
+                <p>Uramak łosoś surimi</p>
+                <p>Hosomak oshinko</p>
+                <p>SET 2   25 szt./ 89 zł</p>
+                <p>Futomak philadelphia</p>
+                <p>Futomak łosoś wędzony</p>
+                <p>Uramak california Gold</p>
+                <p>Hosomak łosoś</p>
+                <p>Nigiri łosoś x2</p>
+                <p>SET 3   WEGE   17 szt./ 45 zł</p>
+                <p>Futomak tofu</p>
+                <p>Uramak goma</p>
+                <p>Hosomak oshinko</p>
+                <p>SET 4   17 szt./  59 zł</p>
+                <p>Futomak w tempurze - surimi</p>
+                <p>Futomak krewetka w tempurze</p>
+                <p>Uramak pieczony łosoś</p>
+                <p>SET 5   35 szt./ 99 zł</p>
+                <p>Futomak philadelphia</p>
+                <p>Futomak krewetki w tempurze</p>
+                <p>Futomak pieczony łosoś</p>
+                <p>Hosomak surimi</p>
+                <p>Hosomak oshinko</p>
+                <p>Hosomak ogórek</p>
+                <p>SET 6 MIX   28 szt./ 115 zł</p>
+                <p>Futomak dorsz</p>
+                <p>Futomak tatar z łososia</p>
+                <p>Futomak pieczony łosoś</p>
+                <p>Uramak krewetka w tempurze z opalanym łososiem</p>
+                <p>Uramak california Tosago</p>
+                <p>SET 7 URA   20 szt./ 89 zł</p>
+                <p>Uramak california Gold</p>
+                <p>Uramak tuńczyk</p>
+                <p>Uramak krewetka w tempurze z awokado</p>
+                <p>Urama opalany tatar</p>
+                <p>SET 8 FUTO   30 szt./ 135 zł</p>
+                <p>Futomak philadelphia</p>
+                <p>Futomak tatar z łososia</p>
+                <p>Futomak krewetki w tempurze</p>
+                <p>Futomak w tempurze - surimi</p>
+                <p>Futomak łosoś w migdałach</p>
+                <p>SET 9 GRILL    35 szt./ 129 zł</p>
+                <p>Futomak węgorz</p>
+                <p>Futomak ika</p>
+                <p>Futomak krewetka w tempurze z awokado</p>
+                <p>Uramak california Ebi</p>
+                <p>Hosomak dorsz</p>
+                <p>Hosomak tykwa</p>
+                <p>SET 10 MEGA   70 szt./ 299 zł</p>
+                <p>Futomak philadelphia</p>
+                <p>Futomak łosoś wędzony</p>
+                <p>Futomak krewetka w tempurze z tatarem</p>
+                <p>Futomak tuńczyk</p>
+                <p>Futomak łosoś w panko</p>
+                <p>Uramak california Tosago</p>
+                <p>Uramak california Ebi</p>
+                <p>Uramak ika</p>
+                <p>Uramak krewetka w tempurze z węgorzem</p>
+                <p>Hosomak łosoś pieczony</p>
+                <p>Hosomak oshinko</p>
+                <p>Hosomak dorsz</p>
+                <p>Nigiri krewetka x2</p>
+                <p>SET TEMPURA   18 szt./ 89 zł</p>
+                <p>Futomak w tempurze - surimi</p>
+                <p>Futomak węgorz w panko</p>
+                <p>Futomak łosoś w migdałach</p>
+            </div>
+            <div id="zestawy-lunch" class="category-content">
+                <h2>Zestawy Lunch</h2>
+                <p>Z1 MIX / 11szt - 42 zł</p>
+                <p>Futomak krewetka gotowana</p>
+                <p>Uramak łosoś</p>
+                <p>Miso tofu/Miso łosoś/Goma wakame</p>
+                <p>Z2 GRILL / 11szt - 42 zł</p>
+                <p>Futomak łosoś pieczony</p>
+                <p>Uramak krewetka w tempurze</p>
+                <p>Miso tofu/Miso łosoś/Goma wakame</p>
+                <p>Z3 WEGE / 11szt - 42 zł</p>
+                <p>Futomak wege w tempurze</p>
+                <p>Uramak goma</p>
+                <p>Miso tofu/Miso łosoś/Goma wakame</p>
+                <p>Zestawy dostępne są do godziny 16:00 od poniedziałku do piątku</p>
+            </div>
+            <div id="cennik-dostaw" class="category-content">
+                <h2>Cennik dostaw</h2>
+                <p>Brzeg - 5 zł</p>
+                <p>Do 10 km - 5 zł + 1 zł/km</p>
+                <p>Brzeg ul. długa 2</p>
+                <p>tel. 881 180 900</p>
+            </div>
+            <div id="happy-hours" class="category-content">
+                <h2>Happy Hours</h2>
+                <p>Do godziny 16:00 - 10% na wszystkie dania z karty (Nie dotyczy oferty lunch)</p>
+            </div>
+        </div>
+</main>
+<script src="/public/menu3/menu3.js"></script>
+</body>
+</html>
