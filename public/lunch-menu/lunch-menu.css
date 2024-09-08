@@ -132,20 +132,6 @@
     color: #FFFFFF;
 }
 
-.lunch-time1 {
-    color: #ea5d5d; /* Розовый цвет для всего текста */
-    font-size: 21px;
-}
-
-.time {
-    color: white; /* Белый цвет для времени */
-    text-shadow:
-            2px 2px 0 black,
-            -2px -2px 0 black,
-            1px -1px 0 black,
-            -1px 1px 0 black; /* Черные края для цифр */
-    font-size: 21px; /* Размер шрифта 21 пиксель */
-}
 
 .highlight {
     color: #ea5d5d;

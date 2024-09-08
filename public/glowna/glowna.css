@@ -1,140 +1,114 @@
-
-/* Additional CSS for container */
-.menu-container {
-    max-width: 1200px;
-    margin: 30px auto 0; /* 20px сверху, авто по бокам, без отступа снизу */
-    padding: 20px; /* Опциональный внутренний отступ для создания пространства */
+.outer-container {
+    width: 90%; /* Измените ширину контейнера, чтобы он занимал 90% ширины экрана */
+    max-width: 1400px; /* Установите максимальную ширину, чтобы он не выходил за пределы 1400px */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Регулируем расстояние между карточками */
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на следующую строку */
+    justify-content: center;
+    margin: 20px auto; /* Убедитесь, что отступы сверху и снизу работают, а слева и справа автоцентрируют */
+    gap: 20px; /* Добавляет отступы между карточками */
 }
 
-.menu-card {
-    width: calc(33.33% - 20px); /* Adjust width to fit 3 cards per row */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgb(59, 78, 89);
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
+.product-card {
     display: flex;
     flex-direction: column;
-}
-.sushi-img {
-    width: 100%; /* Ensures the image takes the full width of its container */
-    height: auto; /* Allows the browser to calculate the height based on the image's aspect ratio */
-    object-fit: cover; /* Ensures the image covers the entire container while maintaining aspect ratio */
+    justify-content: space-between;
+    width: 200px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+
 }
 
-.details {
-    padding: 20px;
+.product-image {
+    width: 100%;
+    height: auto;
 }
-.item-name {
-    font-size: 1.5rem;
-    margin: 0;
-    text-align: left;
+
+.product-info {
+    margin-top: auto;
 }
-.description {
-    font-size: 0.9rem;
-    color: #6c757d;
+
+.product-title {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #3B4E59;
 }
-.price {
-    font-size: 1.4rem;
-    font-weight: normal;
+
+.product-description {
+    font-size: 14px;
+    color: #6C8B9B;
+}
+
+.product-price {
+    font-size: 20px;
     margin: 10px 0;
 }
 
-.quantity {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-}
-.quantity-btn {
-    background-color: #e8e8e8;
-    color: #3b4e59;
-    border: none;
-    padding: 8px 12px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.quantity-btn:hover {
-    background-color: #ea5d5d;
-}
-.quantity-number {
-    margin: 0 10px;
-    font-size: 1.2rem;
-}
-.order-btn {
-    background-color: #ea5d5d;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-.order-btn:hover {
-    background-color: #ea5d5d;
-}
-
-.quantity-number {
-    color: #3B4E59FF;
-}
-
 .price {
-    color: #3B4E59FF;
-}
-
-.item-name {
-    color: #3B4E59FF;
-}
-
-.highlight {
     color: #ea5d5d;
 }
 
-.center-h1 {
-    color: #3b4e59; /* Здесь можно указать любой цвет или код */
+.currency {
+    color: #3b4e59;
 }
 
+.quantity-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px;
+}
 
-/* Медиа-запросы для адаптации стилей под разные экраны */
-@media only screen and (max-width: 1200px) {
-    .menu-card {
-        width: calc(50% - 20px);
-        margin: 10px;
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #3B4E59;
+}
+
+.quantity-btn:hover {
+    background-color: #ea5d5d;
+    color: #fff;
+}
+
+.cart-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cart-btn:active {
+    transform: scale(1.1);
+}
+
+/* Адаптивные стили для телефонов */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Карточки занимают 100% ширины контейнера на маленьких экранах */
+        max-width: 300px; /* Максимальная ширина карточки */
+    }
+
+    .quantity-controls {
+        /* Убедитесь, что элементы остаются в одной строке на мобильных экранах */
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .quantity-btn {
+        margin: 0 5px; /* Добавляем отступы между кнопками по горизонтали */
+    }
+
+    .quantity-controls > * {
+        margin: 0 5px; /* Добавляем отступы между элементами */
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .menu-card {
-        width: calc(100% - 20px);
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .sushi-img {
-        height: 200px; /* Уменьшаем высоту изображений для маленьких экранов */
-    }
-
-    .item-name {
-        font-size: 1.2rem; /* Уменьшаем размер заголовков для маленьких экранов */
-    }
-
-    .description {
-        font-size: 0.8rem; /* Уменьшаем размер описаний для маленьких экранов */
-    }
-
-    .price {
-        font-size: 1rem; /* Уменьшаем размер цены для маленьких экранов */
-    }
-
-    .quantity-btn,
-    .order-btn {
-        padding: 6px 10px; /* Уменьшаем отступы у кнопок для маленьких экранов */
-        font-size: 0.9rem; /* Уменьшаем размер текста у кнопок для маленьких экранов */
-    }
-}

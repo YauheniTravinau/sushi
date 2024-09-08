@@ -1,9 +1,10 @@
-.outer-container {
+.outer-containerr {
     display: flex;
     justify-content: center;
     align-items: center;
     transform: rotate(12deg);
     transform-origin: center;
+    margin: 50px auto;
 }
 
 .inner-container {
@@ -28,3 +29,4 @@
 html {
     scroll-behavior: smooth;
 }
+
