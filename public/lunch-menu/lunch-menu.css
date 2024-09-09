@@ -1,3 +1,12 @@
+/* Заголовки внутри .product-card остаются с шрифтом Gagalin */
+.product-card h1,
+.product-card h2,
+.product-card h3,
+.product-card h4 {
+    font-family: 'Gagalin', sans-serif; /* Используем шрифт Gagalin для заголовков */
+    color: #3b4e59; /* Новый цвет для заголовков */
+}
+
 /* Подключение шрифта OpenSauceTwo */
 @font-face {
     font-family: 'OpenSauceTwo';
@@ -8,31 +17,20 @@
 
 /* Применение шрифта OpenSauceTwo к тексту внутри .product-card */
 .product-card {
-    font-family: 'OpenSauceTwo', sans-serif; /* Применяем шрифт к тексту внутри .product-card */
-}
-
-/* Заголовки внутри .product-card остаются с шрифтом Gagalin */
-.product-card h1,
-.product-card h2,
-.product-card h3,
-.product-card h4 {
-    font-family: 'Gagalin', sans-serif; /* Используем шрифт Gagalin для заголовков */
-}
-
-.product-card {
+    font-family: 'OpenSauceTwo', sans-serif;
     display: flex;
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1100px; /* Уменьшаем максимальную ширину карточки */
-    margin: 20px auto; /* Увеличенный отступ для центрирования и разделения карточек */
+    box-shadow: 0 4px 8px rgb(59, 78, 89);
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
 .product-info {
     padding: 20px;
     flex: 1;
-    text-align: center; /* Центрируем весь текст внутри div */
+    text-align: center;
 }
 
 .product-images {
@@ -42,65 +40,56 @@
 }
 
 .product-images.product-images-right {
-    border-left: none; /* Убираем линию слева */
-    border-right: 1px solid #ddd; /* Добавляем линию справа для второй карточки */
+    border-left: none;
+    border-right: 1px solid #ddd;
 }
 
 .main-image {
-    padding: 20px;
+    padding: 0; /* Удаление отступов вокруг основного изображения */
     text-align: center;
 }
 
 .main-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%;
+    height: 100%; /* Принудительно заполняем контейнер */
+    object-fit: cover; /* Сохраняем пропорции и заполняем контейнер */
 }
 
-.thumbnails {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-.thumbnails img {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.thumbnails img:hover {
-    border: 2px solid rgb(234, 93, 93);
-}
 
 .price {
-    text-align: center; /* Центрируем текст */
-    border: 2px solid #000; /* Толщина, стиль и цвет рамки */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 10px; /* Внутренний отступ, чтобы текст не прилегал к краям рамки */
+    text-align: center;
+    border: 2px solid #3b4e59; /* Цвет рамки */
+    border-radius: 10px;
+    padding: 10px;
+    color: #ea5d5d; /* Цвет текста цены — розовый */
 }
 
+.currency {
+    color: #3b4e59; /* Цвет валюты — серый */
+}
 
 .description {
     font-size: 0.9rem;
-    color: #666;
-    padding: 10px 0; /* Добавляем внутренние отступы только сверху и снизу */
-    text-align: center; /* Центрируем текст */
+    color: #6C8B9B; /* Описание текста — светло-синий */
+    padding: 10px 0;
+    text-align: center;
 }
 
 .product-info ul {
-    padding-left: 0; /* Убираем отступ слева для списка */
-    list-style-type: none; /* Убираем маркеры списка */
-    text-align: center; /* Центрируем текст */
+    padding-left: 0;
+    list-style-type: none;
+    text-align: center;
+    color: #6C8B9B; /* Цвет для списка */
+}
+
+p {
+    color: #3b4e59; /* Цвет для текста абзаца */
 }
 
 .message-text {
     font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #666;
+    margin: 10px 0;
+    color: #6c8b9b; /* Основной цвет текста */
 }
 
 .phone-button {
@@ -111,9 +100,9 @@
     text-decoration: none;
     margin: 0 5px;
     border-radius: 6px;
-    color: rgb(234, 93, 93); /* Цвет WhatsApp */
+    color: rgb(234, 93, 93); /* Цвет текста кнопки */
     background-color: #FFFFFF;
-    border: 1px solid rgb(234, 93, 93);
+    border: 1px solid rgb(234, 93, 93); /* Цвет бордера кнопки */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -122,21 +111,11 @@
     color: #FFFFFF;
 }
 
-.phone-button {
-    color: rgb(234, 93, 93); /* Цвет телефона */
-    border-color: rgb(234, 93, 93);
-}
-
-.phone-button:hover {
-    background-color: rgb(234, 93, 93);
-    color: #FFFFFF;
-}
-
-
 .highlight {
-    color: #ea5d5d;
+    color: #ea5d5d; /* Подсветка розовым цветом */
 }
 
+/* Адаптивные стили */
 @media screen and (max-width: 768px) {
     .product-card {
         flex-direction: column;
@@ -145,33 +124,20 @@
 
     .product-images {
         border-left: none;
-        border-bottom: 1px solid #ddd; /* Добавляем линию снизу на мобильных устройствах */
+        border-bottom: 1px solid #ddd;
     }
 
     .product-images.product-images-right {
-        border-right: none; /* Убираем линию слева */
+        border-right: none;
     }
 
-    .product-info {
-        padding: 20px;
-    }
-
-    .main-image {
-        order: 1; /* Перемещаем изображение вверх на мобильных устройствах */
-    }
-
-    .product-info {
-        order: 2; /* Перемещаем информацию вниз на мобильных устройствах */
-    }
-
-    /* Новые стили для мелких экранов */
     .lunch-time1 {
-        font-size: 18px; /* Уменьшаем размер шрифта для мелких экранов */
-        text-align: center; /* Центрируем текст */
-        margin: 0 10px; /* Добавляем отступы по краям */
+        font-size: 18px;
+        text-align: center;
+        margin: 0 10px;
     }
 
     .time {
-        font-size: 18px; /* Уменьшаем размер шрифта для мелких экранов */
+        font-size: 18px;
     }
 }
