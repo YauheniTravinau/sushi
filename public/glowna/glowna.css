@@ -11,14 +11,12 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 200px;
     border: 1px solid #ddd;
     background-color: #fff;
     text-align: center;
     box-sizing: border-box;
     position: relative;
-
 }
 
 .product-image {
@@ -27,23 +25,30 @@
 }
 
 .product-info {
-    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%; /* Это поможет карточке расширяться по высоте */
 }
 
 .product-title {
     font-size: 18px;
-    margin: 5px 0;
+    margin: 0; /* Убираем отступы для лучшего выравнивания */
     color: #3B4E59;
 }
 
 .product-description {
     font-size: 14px;
     color: #6C8B9B;
+    margin: 5px 0; /* Добавляем вертикальные отступы */
+    text-align: center; /* Центрируем текст */
 }
 
 .product-price {
     font-size: 20px;
     margin: 10px 0;
+    color: #3B4E59;
 }
 
 .price {
@@ -98,7 +103,6 @@
     }
 
     .quantity-controls {
-        /* Убедитесь, что элементы остаются в одной строке на мобильных экранах */
         flex-direction: row;
         flex-wrap: nowrap;
     }
@@ -110,5 +114,44 @@
     .quantity-controls > * {
         margin: 0 5px; /* Добавляем отступы между элементами */
     }
+
+    .lunch-time1 {
+        font-size: 16px; /* Увеличиваем размер шрифта для экранов больше 600px */
+        margin: 15px 20px; /* Увеличиваем отступы для больших экранов */
+    }
+
+    .time {
+        font-size: 16px;
+        font-weight: normal; /* Обычное начертание времени на больших экранах */
+    }
 }
 
+/* Вегетарианская еда иконка */
+.vegetarian-text {
+    color: green; /* Цвет для вегетарианских блюд */
+}
+
+.emoji-broccoli {
+    font-size: 18px;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.emoji-broccoli::before {
+    content: "🥦";
+    margin-right: 4px;
+    animation: eatBroccoli 2s infinite;
+}
+
+@keyframes eatBroccoli {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
