@@ -62,7 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Отображение уведомления при клике на иконку "Рассказать о нас"
     shareLinkBtn.addEventListener('click', (event) => {
         event.preventDefault();
-        alert('Мы в социальных сетях! Поделитесь нашим сайтом.');
+
+        // Проверка наличия поддержки Web Share API
+        if (navigator.share) {
+            navigator.share({
+                title: 'Рассказать о нас',
+                url: window.location.href
+            }).then(() => {
+                console.log('Спасибо, что поделились!');
+            }).catch((error) => {
+                console.log('Ошибка при попытке поделиться:', error);
+            });
+        } else {
+            // Если Web Share API не поддерживается, отображаем уведомление
+            alert('Мы в социальных сетях! Поделитесь нашим сайтом.');
+        }
     });
 });
 
