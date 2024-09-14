@@ -1,0 +1,78 @@
+.container7 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: #ea5d5d;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container7 h1, .container7 h2, .container7 p {
+    color: #3b4e59;
+}
+
+.email-link {
+    color: #ea5d5d;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .container7 {
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    .container7 h1 {
+        font-size: 24px;
+    }
+
+    .container7 h2 {
+        font-size: 20px;
+    }
+
+    .container7 p {
+        font-size: 16px;
+    }
+
+    #cookie-banner {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #accept-cookies {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Адаптивные стили для очень маленьких экранов */
+@media (max-width: 480px) {
+    .container7 h1 {
+        font-size: 20px;
+    }
+
+    .container7 h2 {
+        font-size: 18px;
+    }
+
+    .container7 p {
+        font-size: 14px;
+    }
+
+
+    #accept-cookies {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}

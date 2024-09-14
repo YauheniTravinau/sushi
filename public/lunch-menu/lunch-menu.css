@@ -115,29 +115,54 @@ p {
     color: #ea5d5d; /* Подсветка розовым цветом */
 }
 
-/* Адаптивные стили */
+/* Адаптивные стили *//* Адаптивные стили */
 @media screen and (max-width: 768px) {
     .product-card {
         flex-direction: column;
         margin: 10px;
+        max-width: 100%; /* Убираем ограничение по ширине */
+        box-shadow: none; /* Убираем тень для более компактного вида */
+        border: 1px solid #ddd; /* Тонкая обводка вокруг карточки */
     }
 
     .product-images {
-        border-left: none;
-        border-bottom: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        border: none; /* Убираем разделительную линию */
+        margin-bottom: 10px; /* Добавляем отступ между изображением и текстом */
     }
 
-    .product-images.product-images-right {
-        border-right: none;
+    .product-info {
+        padding: 15px; /* Уменьшение отступов внутри блока с информацией */
     }
 
-    .lunch-time1 {
-        font-size: 18px;
-        text-align: center;
-        margin: 0 10px;
+    .main-image img {
+        width: 100%; /* Изображения занимают всю ширину контейнера */
+        height: auto; /* Высота подстраивается автоматически */
+        object-fit: cover; /* Сохраняем пропорции и заполняем контейнер */
     }
 
+    .price {
+        font-size: 1rem; /* Уменьшение размера шрифта цены */
+        padding: 8px; /* Уменьшение отступов вокруг цены */
+    }
+
+    .description {
+        font-size: 0.8rem; /* Уменьшение размера шрифта описания */
+    }
+
+    .message-text {
+        font-size: 16px; /* Уменьшение размера шрифта сообщения */
+    }
+
+    .phone-button {
+        padding: 8px 16px; /* Уменьшение отступов внутри кнопок */
+        font-size: 12px; /* Уменьшение размера шрифта кнопок */
+    }
+
+    .lunch-time1,
     .time {
-        font-size: 18px;
+        font-size: 16px; /* Уменьшение размера шрифта для времени */
     }
 }
+

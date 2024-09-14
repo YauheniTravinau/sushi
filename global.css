@@ -62,3 +62,83 @@ h1, h2, h3, h4 {
 html, body {
     overflow-x: hidden;
 }
+
+/*куки*/
+/* Стили для баннера cookie */
+#cookie-banner {
+    background-color: #f8f8f8;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none; /* По умолчанию скрыто */
+    z-index: 9999;
+}
+
+/* Стили для кнопки "Принять" */
+#accept-cookies {
+    background-color: #ea5d5d; /* Синий фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* Округленные углы */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+}
+
+#accept-cookies:hover {
+    background-color: #3b4e59; /* Темнее при наведении */
+}
+
+/* Стили для ссылки "узнать больше" */
+#cookie-banner a {
+    color: #ea5d5d;
+    text-decoration: none;
+}
+
+#cookie-banner a:hover {
+    text-decoration: underline;
+}
+
+#cookie-banner p {
+    color: #3b4e59;
+}
+
+/* иконки справа экрана */
+.icons {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon {
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    width: 48px;
+    height: 48px;
+    color: #333;
+    font-size: 24px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+    line-height: 48px;
+}
+
+.icon img {
+    width: 36px; /* Установите нужный размер для иконки */
+    height: 36px;
+}
+
+.icon:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}

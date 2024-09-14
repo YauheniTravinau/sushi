@@ -27,6 +27,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Загрузка второго меню
     loadHtml('/public/menu2/menu2.html', 'menu2-placeholder');
+
+    // Загрузка иконок
+    loadHtml('/public/icons/icons.html', 'icons-placeholder');
+
+    // Проверка наличия куки
+    if (!document.cookie.split('; ').find(row => row.startsWith('cookies_accepted='))) {
+        // Если куки не установлены, показываем баннер
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        // Устанавливаем куку, чтобы не показывать баннер снова
+        document.cookie = "cookies_accepted=true; path=/; max-age=" + 60*60*24*365; // Кука действительна 1 год
+        // Скрываем баннер
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+});
+
+// Обработчик кликов по иконкам
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    const shareLinkBtn = document.getElementById('share-link');
+
+    // Плавная прокрутка вверх
+    scrollToTopBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Отображение уведомления при клике на иконку "Рассказать о нас"
+    shareLinkBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        alert('Мы в социальных сетях! Поделитесь нашим сайтом.');
+    });
+});
+
+// Обработчик кликов по ссылке на карту
+document.querySelector('#icons-placeholder a[href^="https://www.google.com/maps"]').addEventListener('click', function() {
+    // Открытие Google Maps в новой вкладке
+    window.open(this.href, '_blank');
 });
 
 /*бургер меню*/
