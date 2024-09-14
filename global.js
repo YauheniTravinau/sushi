@@ -57,29 +57,6 @@ if (scrollToTopButton) {
     });
 }
 
-const shareLink = document.getElementById('share-link');
-if (shareLink) {
-    shareLink.addEventListener('click', function(event) {
-        // Отключаем стандартное поведение
-        event.preventDefault();
-
-        const shareData = {
-            title: 'Посетите наш сайт!',
-            text: 'Рассказать о нас',
-            url: 'https://example.com' // Замените на реальный URL вашего сайта
-        };
-
-        if (navigator.share) {
-            navigator.share(shareData)
-                .then(() => console.log('Успешно поделились'))
-                .catch((error) => console.log('Ошибка при шаринге', error));
-        } else {
-            // Открываем обычное окно шаринга, если Web Share API не поддерживается
-            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}&t=${encodeURIComponent(shareData.text)}`;
-            window.open(shareUrl, '_blank');
-        }
-    });
-}
 /*бургер меню*/
 function toggleMenu() {
     const menuBtn = document.querySelector('.menu-btn');
