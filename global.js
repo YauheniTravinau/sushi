@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Обработчик кликов по иконкам
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopButton = document.getElementById('scroll-to-top');
-
+const scrollToTopButton = document.getElementById('scroll-to-top');
+if (scrollToTopButton) {
     scrollToTopButton.addEventListener('click', function(event) {
         event.preventDefault(); // Отменяем стандартное поведение ссылки
         window.scrollTo({
@@ -56,35 +55,31 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth' // Плавный скролл
         });
     });
-});
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const shareLink = document.getElementById('share-link');
-
+const shareLink = document.getElementById('share-link');
+if (shareLink) {
     shareLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Предотвращаем переход по ссылке
+        // Отключаем стандартное поведение
+        event.preventDefault();
+
+        const shareData = {
+            title: 'Посетите наш сайт!',
+            text: 'Рассказать о нас',
+            url: 'https://example.com' // Замените на реальный URL вашего сайта
+        };
 
         if (navigator.share) {
-            navigator.share({
-                title: 'Рассказать о нас',
-                text: 'Посмотрите наш сайт!',
-                url: window.location.href
-            })
-                .then(() => {
-                    console.log('Успешно поделились');
-                })
-                .catch((error) => {
-                    console.error('Ошибка при шаринге:', error);
-                });
+            navigator.share(shareData)
+                .then(() => console.log('Успешно поделились'))
+                .catch((error) => console.log('Ошибка при шаринге', error));
         } else {
-            // Открытие окна для шаринга, если Web Share API не поддерживается
-            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
-            window.open(shareUrl, '_blank', 'width=600,height=400');
+            // Открываем обычное окно шаринга, если Web Share API не поддерживается
+            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}&t=${encodeURIComponent(shareData.text)}`;
+            window.open(shareUrl, '_blank');
         }
     });
-});
-
-
+}
 /*бургер меню*/
 function toggleMenu() {
     const menuBtn = document.querySelector('.menu-btn');
