@@ -46,45 +46,44 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Обработчик кликов по иконкам
-document.addEventListener('DOMContentLoaded', () => {
-    const scrollToTopBtn = document.getElementById('scroll-to-top');
-    const shareLinkBtn = document.getElementById('share-link');
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
 
-    // Плавная прокрутка вверх
-    scrollToTopBtn.addEventListener('click', (event) => {
-        event.preventDefault();
+    scrollToTopButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Отменяем стандартное поведение ссылки
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth' // Плавный скролл
         });
     });
+});
 
-    // Отображение уведомления при клике на иконку "Рассказать о нас"
-    shareLinkBtn.addEventListener('click', (event) => {
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const shareLink = document.getElementById('share-link');
 
-        // Проверка наличия поддержки Web Share API
+    shareLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Предотвращаем переход по ссылке
+
         if (navigator.share) {
             navigator.share({
                 title: 'Рассказать о нас',
+                text: 'Посмотрите наш сайт!',
                 url: window.location.href
-            }).then(() => {
-                console.log('Спасибо, что поделились!');
-            }).catch((error) => {
-                console.log('Ошибка при попытке поделиться:', error);
-            });
+            })
+                .then(() => {
+                    console.log('Успешно поделились');
+                })
+                .catch((error) => {
+                    console.error('Ошибка при шаринге:', error);
+                });
         } else {
-            // Если Web Share API не поддерживается, отображаем уведомление
-            alert('Мы в социальных сетях! Поделитесь нашим сайтом.');
+            // Открытие окна для шаринга, если Web Share API не поддерживается
+            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
         }
     });
 });
 
-// Обработчик кликов по ссылке на карту
-document.querySelector('#icons-placeholder a[href^="https://www.google.com/maps"]').addEventListener('click', function() {
-    // Открытие Google Maps в новой вкладке
-    window.open(this.href, '_blank');
-});
 
 /*бургер меню*/
 function toggleMenu() {
