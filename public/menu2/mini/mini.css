@@ -1,0 +1,99 @@
+/* мини меню2 */
+/* Основные стили для мини-меню */
+.mini-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование меню по вертикали */
+    background-color: #ffffff;
+    padding: 0; /* Удалены отступы */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Высокий z-index для отображения поверх всех элементов */
+    width: 140px; /* Ширина меню */
+    border: 1px solid #ddd;
+    transition: left 0.3s; /* Плавное перемещение меню */
+}
+
+/* Кнопка для открытия/закрытия меню */
+.mini-menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px; /* Размер стрелки */
+    cursor: pointer;
+    position: absolute;
+    left: 100%; /* Расположение кнопки для открытия/закрытия меню */
+    transform: translateX(-100%); /* Сдвиг кнопки влево на ширину меню */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000; /* Должна быть выше меню */
+}
+
+/* Стили для контейнера меню */
+.mini-menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Показ меню при активной кнопке */
+.mini-menu-wrapper.active {
+    left: 0; /* Открытое меню */
+}
+
+/* Стили для заголовков меню */
+.mini-menu-title {
+    font-size: 14px; /* Размер шрифта заголовков */
+    color: #007bff; /* Цвет заголовков */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Удаление подчеркивания */
+    padding: 10px; /* Отступы вокруг заголовков */
+    border-bottom: 1px solid #ddd; /* Линия под заголовком */
+}
+
+/* Стили для каждого пункта меню */
+.mini-menu-item {
+    display: flex;
+    align-items: center;
+    margin: 0; /* Удалены отступы */
+    text-decoration: none;
+    color: #333;
+    font-size: 12px; /* Размер текста */
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    padding: 2px; /* Небольшие внутренние отступы */
+}
+
+/* Стили для изображений */
+.mini-menu-item img {
+    width: 14px; /* Уменьшенные изображения */
+    height: 14px; /* Уменьшенные изображения */
+    margin-right: 4px; /* Расстояние между изображением и текстом */
+}
+
+/* Стили для текста */
+.mini-menu-item-text {
+    font-size: 12px; /* Размер текста */
+}
+
+/* Элементы меню при наведении */
+.mini-menu-item:hover {
+    background-color: #f0f0f0;
+    color: #007bff; /* Цвет текста при наведении */
+}
+
+/* Линии разделения между элементами меню */
+.mini-menu-item:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd; /* Очень тонкая линия */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+}

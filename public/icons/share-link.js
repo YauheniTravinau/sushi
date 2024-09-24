@@ -1,47 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const shareButton = document.getElementById('share-link');
-    const shareModal = document.getElementById('share-modal');
-    const closeModal = document.querySelector('.close');
-
-    if (shareButton && shareModal && closeModal) {
+// Функция для добавления слушателя на кнопку "Поделиться"
+function addShareButtonListener() {
+    const shareButton = document.getElementById('shareButton');
+    if (shareButton) {
         shareButton.addEventListener('click', function() {
-            shareModal.style.display = 'flex';
-        });
+            let url = window.location.href; // Получаем URL текущей страницы
 
-        closeModal.addEventListener('click', function() {
-            shareModal.style.display = 'none';
-        });
-
-        document.getElementById('copy-link').addEventListener('click', function() {
-            navigator.clipboard.writeText(window.location.href).then(() => {
-                alert('Ссылка скопирована в буфер обмена!');
-            }).catch(() => {
-                alert('Не удалось скопировать ссылку.');
-            });
-        });
-
-        document.getElementById('share-whatsapp').addEventListener('click', function() {
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('share-telegram').addEventListener('click', function() {
-            window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('share-facebook').addEventListener('click', function() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('share-twitter').addEventListener('click', function() {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=Посмотрите%20этот%20сайт!`, '_blank');
-        });
-
-        document.getElementById('share-instagram').addEventListener('click', function() {
-            window.open(`https://www.instagram.com/direct/new/?text=${encodeURIComponent(window.location.href)}`, '_blank');
-        });
-
-        document.getElementById('share-sms').addEventListener('click', function() {
-            window.open(`sms:?body=${encodeURIComponent(window.location.href)}`, '_blank');
+            // Если API "Поделиться" доступно в браузере
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Заголовок вашего сайта',
+                    text: 'Описание вашего сайта',
+                    url: url
+                })
+                    .then(() => console.log('Ресурс успешно поделен!'))
+                    .catch((error) => console.error('Ошибка при попытке поделиться:', error));
+            } else {
+                // Если API "Поделиться" недоступно в браузере, открываем обычное окно для шаринга
+                let shareUrl = 'https://example.com/share?url=' + encodeURIComponent(url);
+                window.open(shareUrl, '_blank');
+            }
         });
     }
-});
+}
