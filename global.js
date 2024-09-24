@@ -83,7 +83,7 @@ function closeMenuIfScrolled() {
     }
 }
 
-// Обработчик кликов по кнопке "Поделиться"
+// Функция для добавления слушателя на кнопку "Поделиться"
 function addShareButtonListener() {
     const shareButton = document.getElementById('shareButton');
     if (shareButton) {
