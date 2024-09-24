@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Загрузка иконок
     loadHtml('/public/icons/icons.html', 'icons-placeholder');
 
+    addShareButtonListener();
+
     // Проверка наличия куки
     if (!document.cookie.split('; ').find(row => row.startsWith('cookies_accepted='))) {
         // Если куки не установлены, показываем баннер
@@ -105,6 +107,3 @@ function addShareButtonListener() {
         });
     }
 }
-
-// Запускаем функцию после загрузки страницы
-document.addEventListener('DOMContentLoaded', addShareButtonListener);
