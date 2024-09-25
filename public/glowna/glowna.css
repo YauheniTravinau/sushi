@@ -59,42 +59,6 @@
     color: #3b4e59;
 }
 
-.quantity-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    padding: 15px;
-}
-
-.quantity-btn {
-    width: 30px;
-    height: 30px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: #3B4E59;
-}
-
-.quantity-btn:hover {
-    background-color: #ea5d5d;
-    color: #fff;
-}
-
-.cart-btn {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.cart-btn:active {
-    transform: scale(1.1);
-}
-
 /* Адаптивные стили для телефонов */
 @media (max-width: 768px) {
     .product-card {
@@ -155,3 +119,5 @@
         transform: translateY(0);
     }
 }
+
+
