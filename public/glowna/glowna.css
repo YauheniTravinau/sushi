@@ -11,7 +11,7 @@
 .product-card {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     border: 1px solid #ddd;
     background-color: #fff;
     text-align: center;
@@ -41,8 +41,15 @@
 .product-description {
     font-size: 14px;
     color: #6C8B9B;
-    margin: 5px 0; /* Добавляем вертикальные отступы */
-    text-align: center; /* Центрируем текст */
+    list-style-position: inside; /* Перемещает маркеры внутрь */
+    padding-left: 15px; /* Убирает отступ слева */
+    margin: 5px 0; /* Оставляем небольшой отступ для текста */
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.product-description li {
+    margin-left: 0; /* Убираем отступы для каждого элемента списка */
+    padding-left: 0; /* Убираем внутренние отступы */
 }
 
 .product-price {
