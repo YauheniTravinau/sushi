@@ -135,6 +135,7 @@ li:hover .logo-container {
     .logo-container {
         width: 60px;
         height: 60px;
+        display: none;
     }
 
     li:hover .logo-container {

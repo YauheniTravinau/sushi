@@ -114,9 +114,9 @@ html, body {
     align-items: center;
     position: fixed;
     right: 10px; /* Отступ от правого края экрана */
-    top: 50%;
+    top: 85%;
     transform: translateY(-50%); /* Центрирование иконок по вертикали */
-    background-color: #f8f8f8;
+    background-color: rgba(248, 248, 248, 0.7);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -141,4 +141,19 @@ html, body {
 .icon:hover {
     background-color: #e0e0e0;
     border-radius: 50%;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    .icons {
+        right: 7px; /* Меньший отступ от правого края */
+        top: 85%; /* Позиционируем ниже на экране */
+        padding: 5px;
+    }
+
+    .icon {
+        width: 28px; /* Меньший размер иконок */
+        height: 28px;
+        margin-bottom: 6px; /* Меньшее расстояние между иконками */
+    }
 }

@@ -51,8 +51,8 @@
 
 .quantity-bubble {
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -12px;
+    left: -12px;
     background-color: #ea5d5d;
     color: white;
     border-radius: 50%;
