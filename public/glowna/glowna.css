@@ -97,24 +97,6 @@
     }
 }
 
-/* Вегетарианская еда иконка */
-.vegetarian-text {
-    color: green; /* Цвет для вегетарианских блюд */
-}
-
-.emoji-broccoli {
-    font-size: 18px;
-    margin-left: 8px;
-    display: inline-flex;
-    align-items: center;
-}
-
-.emoji-broccoli::before {
-    content: "🥦";
-    margin-right: 4px;
-    animation: eatBroccoli 2s infinite;
-}
-
 @keyframes eatBroccoli {
     0% {
         transform: translateY(0);
