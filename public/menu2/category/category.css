@@ -30,3 +30,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/*отступ выравнивание*/
+.padded-text {
+    padding-left: 20px;
+}
